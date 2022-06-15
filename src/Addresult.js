@@ -157,7 +157,7 @@ function Addresult() {
         setMaths('')
         setHindi('')
         setSstd('')
-        setMaxmarks('')
+        setMaxmarks('200')
         setTottalmarks('')
         setPercentage('')
     }
