@@ -30,6 +30,7 @@ function Dbcard(props) {
                             <th>S.std</th>
                         </tr>
                     </thead>
+                    
                     <tbody>
                         {props.tabledb.map((detail, i)=>{
                             return(
@@ -48,6 +49,18 @@ function Dbcard(props) {
                             )
                         })}
                     </tbody>
+                    <tfoot>
+                            <tr>
+                                <th className='footer' colSpan="3">Total:</th>
+                                <td className='footer2'>{}</td>
+                                <td className='footer2'></td>
+                                <td className='footer2'></td>
+                                <td className='footer2'></td>
+                                <td className='footer2'></td>
+                                <td className='footer2'></td>
+                                <td className='footer2'></td>
+                            </tr>
+                    </tfoot>
                 </table>
             }
         </div>
