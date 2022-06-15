@@ -24,7 +24,7 @@ function Addresult() {
         setDiss(true)
         setTimeout(()=>{
             getTotalMarks()
-            getPercentage()
+            // getPercentage()
             setDiss(false)
         }, 1000)
     }, [science, maths, hindi, sstd])
@@ -35,12 +35,20 @@ function Addresult() {
         let hi = parseInt(hindi) ? parseInt(hindi):0
         let ss = parseInt(sstd) ? parseInt(sstd) :0
         let tot = sc + ma + hi + ss 
+        console.log('total', tot)
         setTottalmarks(tot + '')
+        getPercentage(tot)
     }
-    const getPercentage = ()=>{
-        let tMark= parseInt(totalmarks) ? parseInt(totalmarks) :0
+    const getPercentage = (tMark)=>{
+        // let sc = parseInt(science) ? parseInt(science) :0
+        // let ma = parseInt(maths) ? parseInt(maths) :0
+        // let hi = parseInt(hindi) ? parseInt(hindi):0
+        // let ss = parseInt(sstd) ? parseInt(sstd) :0
+        // let tMark = sc + ma + hi + ss 
+        // // let tMark= parseInt(totalmarks) ? parseInt(totalmarks) :0
         let mMark= parseInt(maxmarks) ? parseInt(maxmarks) :0
         let result= (tMark/mMark)*100
+        console.log(tMark,mMark,"percentag");
         setPercentage(result + '')
     }
     const fName = (event) =>{
@@ -147,8 +155,7 @@ function Addresult() {
             alert('Form Submitted')
         } catch (event) {
             console.error("Error adding document: ", event);
-            // refund
-        }
+    }
         }
     }
     const reset =()=>{
