@@ -26,3 +26,16 @@ td {
 }
 
 tr:hover {background-color: coral;}
+
+th.footer{
+    color: white;
+    background-color: red;
+    padding: 8px;
+    text-align: center;
+}
+th.footer2{
+    background-color: DodgerBlue;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
