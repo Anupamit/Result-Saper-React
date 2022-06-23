@@ -11,6 +11,48 @@ function Dbcard(props) {
     const editUser=async(event, i, detailData)=>{
         window.location.href = `editresult?id=${detailData.id}&name=${detailData.name}`
     }
+    const maxmarks=()=>{
+        if (props.tabledb) {
+            const sumWithMaxmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.maxmarks)),0);
+            return sumWithMaxmarks
+        }
+    }
+    const totaltable=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.totalmarks)),0);
+            return sumWithTotalmarks
+        }
+    }
+    const percentage=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.percentage)),0);
+            return sumWithTotalmarks
+        }
+    }
+    const science=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.science)),0);
+            return sumWithTotalmarks
+        }
+    }
+    const maths=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.maths)),0);
+            return sumWithTotalmarks
+        }
+    }
+    const hindi=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.hindi)),0);
+            return sumWithTotalmarks
+        }
+    }
+    const sstd=()=>{
+        if (props.tabledb) {
+            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.sstd)),0);
+            return sumWithTotalmarks
+        }
+    }
     
     return (
         <div>
@@ -52,13 +94,13 @@ function Dbcard(props) {
                     <tfoot>
                             <tr>
                                 <th className='footer' colSpan="3">Total:</th>
-                                <td className='footer2'>{}</td>
-                                <td className='footer2'></td>
-                                <td className='footer2'></td>
-                                <td className='footer2'></td>
-                                <td className='footer2'></td>
-                                <td className='footer2'></td>
-                                <td className='footer2'></td>
+                                <td className='footer2'>{maxmarks()}</td>
+                                <td className='footer2'>{totaltable()}</td>
+                                <td className='footer2'>{percentage()}</td>
+                                <td className='footer2'>{science()}</td>
+                                <td className='footer2'>{maths()}</td>
+                                <td className='footer2'>{hindi()}</td>
+                                <td className='footer2'>{sstd()}</td>
                             </tr>
                     </tfoot>
                 </table>
