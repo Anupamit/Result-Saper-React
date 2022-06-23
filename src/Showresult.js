@@ -16,7 +16,7 @@ function Showresult() {
         let complaintsData = []
         const querySnapshot = await getDocs(collection(db, "result"));
         querySnapshot.forEach((doc) => {
-        console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id, " => ", doc.data());
         let data = doc.data()
         data.id = doc.id
         complaintsData.push(data)
