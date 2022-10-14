@@ -31,26 +31,26 @@ function Dbcard(props) {
     }
     const science=()=>{
         if (props.tabledb) {
-            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.science)),0);
-            return sumWithTotalmarks
+            const sumWithSciencemarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.science)),0);
+            return sumWithSciencemarks
         }
     }
     const maths=()=>{
         if (props.tabledb) {
-            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.maths)),0);
-            return sumWithTotalmarks
+            const sumWithMathsmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.maths)),0);
+            return sumWithMathsmarks
         }
     }
     const hindi=()=>{
         if (props.tabledb) {
-            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.hindi)),0);
-            return sumWithTotalmarks
+            const sumWithHIndimarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.hindi)),0);
+            return sumWithHIndimarks
         }
     }
     const sstd=()=>{
         if (props.tabledb) {
-            const sumWithTotalmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.sstd)),0);
-            return sumWithTotalmarks
+            const sumWithSstdmarks = props.tabledb.reduce((previousValue, currentValue) =>(previousValue + parseInt(currentValue.sstd)),0);
+            return sumWithSstdmarks
         }
     }
     

@@ -26,7 +26,7 @@ function Addresult() {
             getTotalMarks()
             // getPercentage()
             setDiss(false)
-        }, 1000)
+        }, 2000)
     }, [science, maths, hindi, sstd])
     
     const getTotalMarks = ()=>{
